@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Government";
+}
+
+<button class="btn btn-primary btn-sm" id="btnAddGovernment">Add Government</button>
+
+<table class="table table-bordered mt-2">
+    <thead class="text-center">
+        <tr >
+            <th>Id</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="table_data" class="text-center">
+
+    </tbody>
+</table>
+
+<div class="modal fade" id="GovernmentModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title " id="exampleModalLabel">Add Government</h5>
+        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="post" id="FormData">
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-12 col-form-label">Id</label>
+                <div class="col-sm-12">
+                        <input type="text" class="form-control" id="Id" name="Id" readonly>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-12 col-form-label">Government Name</label>
+                <div class="col-sm-12">
+                        <input type="text" class="form-control" id="Gov_Name" name="Gov_Name" placeholder="Enter Government Name.....">
+                </div>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+            <button type="button" class="btn btn-success btn-sm" onclick="AddGovernment();" id="SaveGovernment">Save</button>
+            <button type="button" class="btn btn-warning btn-sm" onclick="EditGovernment();" id="EditGovernment">Edit</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+@section Scripts{
+    <script src="~/js/GovernmentAjax.js"></script>
+}
