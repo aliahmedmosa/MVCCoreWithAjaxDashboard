@@ -136,7 +136,6 @@ function EditGovernment(){
             ClearTextBox();
             toastr.success("Government Edited !");
         }, error: function () {
-
         }
     });
 }
